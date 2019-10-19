@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: solid;
+    
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
+</style>
+</head>
+
+<div style="width:800px; margin:0 auto;">
+<button class="dropbtn">Impact Council</button>
+<div class="dropdown-content">
+<a>Council 1</a>
+<a>Council 2</a>
+<a>Council 3</a>
+</div>
+</div>
+
+<div style="width:800px; margin:0 auto;">
+<button class="dropbtn">Indicator</button>
+<div class="dropdown-content">
+<a>Indicator 1</a>
+<a>Indicator 2</a>
+<a>Indicator 3</a>
+</div>
+</div>
+
+<div style="width:800px; margin:0 auto;">
+<button class="dropbtn">Strategy</button>
+<div class="dropdown-content">
+<a>Strategy 1</a>
+<a>Strategy 2</a>
+<a>Strategy 3</a>
+</div>
+</div>
+</body>
+</html>
