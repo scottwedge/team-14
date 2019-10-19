@@ -45,7 +45,7 @@ class ExternalWeb extends Component {
       <div className="container">
         <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Impact Council" />
         {/* <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Indicator" /> */}
-        <Dropdown options={this.getStrat()} onChange={this._onSelect} placeholder="Select a Strategy" />
+        <Dropdown options={options} onChange={this._onSelect} placeholder="Select a Strategy" />
         <button>Generate Results</button>
       </div>
     </div>

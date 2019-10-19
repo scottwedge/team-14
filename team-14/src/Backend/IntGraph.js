@@ -4,15 +4,29 @@ import {
 } from 'recharts';
 
 const data = [
-    {name: "July", uv: 370},
-    {name: "August",uv: 130},
-    {name: "September",uv: 143},
-    {name: "July",  v2: 166},
-    {name: "August",v2: 84},
-    {name: "September",v2: 96},
-
-    
+  {
+    name: 'Jan', uv: 4000, pv: 2400, amt: 2400,
+  },
+  {
+    name: 'Feb', uv: 3000, pv: 1398, amt: 2210,
+  },
+  {
+    name: 'March', uv: 2000, pv: 9800, amt: 2290,
+  },
+  {
+    name: 'April', uv: 2780, pv: 3908, amt: 2000,
+  },
+  {
+    name: 'May', uv: 1890, pv: 4800, amt: 2181,
+  },
+  {
+    name: 'June', uv: 2390, pv: 3800, amt: 2500,
+  },
+  {
+    name: 'July', uv: 3490, pv: 4300, amt: 2100,
+  },
 ];
+
 
 export default class InternalScatterPlotContainer extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
@@ -32,9 +46,8 @@ export default class InternalScatterPlotContainer extends PureComponent {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="pv"   stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line type="monotone"  dataKey="v2"  stroke="#8832d8" activeDot={{ r: 7 }} />
-       
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
     );
   }
