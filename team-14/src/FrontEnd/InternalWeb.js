@@ -12,7 +12,7 @@ class InternalWeb extends Component {
     const defaultOption = options[0]
     return (
     <div className="App">
-      <div class="container">
+      <div className="container">
         <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Impact Council" />
         {/* <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Indicator" /> */}
         <Dropdown options={options} onChange={this._onSelect} placeholder="Select a Strategy" />
@@ -25,4 +25,4 @@ class InternalWeb extends Component {
  
 }
 
-export default ExternalWeb;
+export default InternalWeb;
