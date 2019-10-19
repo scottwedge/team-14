@@ -1,0 +1,106 @@
+[
+  
+    {name: "July", uv: 370}
+    {name: "August" ,uv : 130}
+    {name: "September", uv 143}
+  {
+    "July": 166,
+    "August": 84,
+    "September": 96
+  },
+  {
+    "July": 330,
+    "August": 788,
+    "September": 866
+  },
+  {
+    "July": 92,
+    "August": 16,
+    "September": 18
+  },
+  {
+    "July": 760,
+    "August": 1054,
+    "September": 1156
+  },
+  {
+    "July": 12055,
+    "August": 13877,
+    "September": 15273
+  },
+  {
+    "July": 616,
+    "August": 1992,
+    "September": 2190
+  },
+  {
+    "July": 1284,
+    "August": 987,
+    "September": 1089
+  },
+  {
+    "July": 359,
+    "August": 739,
+    "September": 813
+  },
+  {
+    "July": 358,
+    "August": 221,
+    "September": 243
+  },
+  {
+    "July": 328,
+    "August": 415,
+    "September": 456
+  },
+  {
+    "July": 144,
+    "August": 264,
+    "September": 290
+  },
+  {
+    "July": 121,
+    "August": 4719,
+    "September": 5191
+  },
+  {
+    "July": 99,
+    "August": 195,
+    "September": 216
+  },
+  {
+    "July": 374,
+    "August": 178,
+    "September": 198
+  },
+  {
+    "July": 1701,
+    "August": 1716,
+    "September": 1887
+  },
+  {
+    "July": 53,
+    "August": 0,
+    "September": 0
+  },
+  {
+    "July": 2775,
+    "August": 2496,
+    "September": 2744
+  },
+  {
+    "July": 6,
+    "August": 11,
+    "September": 11
+  },
+  {
+    "July": 0,
+    "August": 0,
+    "September": 0
+  },
+  {
+    "July": 128,
+    "August": 41,
+    "September": 45
+  }
+]
