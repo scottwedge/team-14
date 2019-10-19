@@ -10,9 +10,13 @@ import ExternalWeb from './FrontEnd/ExternalWeb';
 function App() {
   return (
     <div className="App">
+      <h1>United Way - San Antonio</h1>
+      <h3>External</h3>
       <ExternalWeb/>
-      <ExternalScatterPlotContainer />
-      <InternalScatterPlotContainer/>
+      <div class="plots">
+        <ExternalScatterPlotContainer/>
+        <InternalScatterPlotContainer/>
+      </div>
     </div>
   );
 }
