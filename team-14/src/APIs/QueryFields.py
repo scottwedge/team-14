@@ -5,11 +5,12 @@ from flask import request, url_for
 from flask_api import FlaskAPI, status, exceptions
 import pandas as pd
 from flask import jsonify
+from flask_cors import CORS, cross_origin
 
 app = FlaskAPI(__name__)
 app.config["DEBUG"] = True
 app.config['CORS_HEADERS'] = {'Content-Type' : 'application/json'}
-
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 
@@ -50,6 +51,7 @@ def get_strategy():
     name = request.form['council']
     # response.headers.add('Access-Control-Allow-Origin')
     strat = strategies(name)
+    print(name)
     return jsonify(strategies=list(strat)), status.HTTP_201_CREATED
 
 app.run()
