@@ -3,9 +3,12 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-var data = require("/Users/Sacheth/Desktop/CodeForGood/team-14/team-14/src/Backend/try.json");
+//var data = require("/Users/Sacheth/Desktop/CodeForGood/team-14/team-14/src/Backend/try.json");
 
-// const data = [
+const data = [
+    {name: "July", uv: 370},
+    {name: "August" ,uv : 130},
+    {name: "September", uv: 143}
 //   {
 //     name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
 //   },
@@ -27,7 +30,7 @@ var data = require("/Users/Sacheth/Desktop/CodeForGood/team-14/team-14/src/Backe
 //   {
 //     name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
 //   },
-// ];
+];
 
 export default class ExternalScatterPlotContainer extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
@@ -47,7 +50,6 @@ export default class ExternalScatterPlotContainer extends PureComponent {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
     );

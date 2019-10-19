@@ -1,9 +1,8 @@
 [
-  {
-    "July": 370,
-    "August": 130,
-    "September": 143
-  },
+  
+    {name: "July", uv: 370}
+    {name: "August" ,uv : 130}
+    {name: "September", uv 143}
   {
     "July": 166,
     "August": 84,

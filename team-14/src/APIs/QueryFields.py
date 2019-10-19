@@ -8,7 +8,7 @@ from flask import jsonify
 
 app = FlaskAPI(__name__)
 app.config["DEBUG"] = True
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = {'Content-Type' : 'application/json'}
 
 
 
@@ -37,20 +37,19 @@ def strategies(name):
 
 
 @app.route("/api/get-impact/", methods=['GET'])
-@cross_origin(origin='localhost', headers=['Content-Type', 'Authorization'])
 def get_impact():
     """
     Returns the different impact councils
     """
     return jsonify(names=impact_councils), status.HTTP_201_CREATED
-@app.route("/api/get-strategy/", methods=['GET'])
+@app.route("/api/get-strategy/", methods=['POST'])
 def get_strategy():
     """
     Returns the different strategies for the different impact councils 
     """
-    # name = request.form['council']
+    name = request.form['council']
     # response.headers.add('Access-Control-Allow-Origin')
-    strat = strategies(impact_councils[0])
+    strat = strategies(name)
     return jsonify(strategies=list(strat)), status.HTTP_201_CREATED
 
 app.run()

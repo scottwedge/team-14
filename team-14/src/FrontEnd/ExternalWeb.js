@@ -3,28 +3,41 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import React , { Component } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
 // import { Link } from 'react-router-dom';
 
 
 const local_host = 'http://127.0.0.1:5000/';
-
-
-const response = await axios.post(
-    'http://127.0.0.1:5000/api/get-strategy',
-    { example: 'data' },
-    { headers: { 'Content-Type': 'application/json' } }
-  )
-  console.log(response.data)
+var strat = []
 
 class ExternalWeb extends Component {
-    
+    getStrat() {
+        var name = {'council': 'Strong Individuals and Families Impact Council'}
+        fetch(local_host + 'api/get-strategy/',{
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'no-cors', // no-cors, *cors, same-origin
+            // 
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+            'Content-Type': 'application/json',
+              'Accepts' : 'application/json',
+               //'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            // redirect: 'follow', // manual, *follow, error
+            // referrer: 'no-referrer', // no-referrer, *client
+            body: JSON.stringify(name) // body data type must match "Content-Type" header
+          })
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({ strategies: data })
+        })
+        .catch(console.log)
+      }
   render() {
     const options = [
       'one', 'two', 'three'
     ]
     const defaultOption = options[0]
-    var data = this.getStrat()
+    
     return (
     <div className="App">
       {/* <Router>
@@ -33,7 +46,7 @@ class ExternalWeb extends Component {
       <div className="container">
         <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Impact Council" />
         {/* <Dropdown options={options} onChange={this._onSelect} placeholder="Select an Indicator" /> */}
-        <Dropdown options={data} onChange={this._onSelect} placeholder="Select a Strategy" />
+        <Dropdown options={this.getStrat()} onChange={this._onSelect} placeholder="Select a Strategy" />
         <button>Generate Results</button>
       </div>
     </div>
