@@ -8,6 +8,10 @@ from flask import jsonify
 
 app = FlaskAPI(__name__)
 app.config["DEBUG"] = True
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+
+
 
 united_csv = pd.read_csv('United_Clean.csv')
 hash = {}
@@ -33,6 +37,7 @@ def strategies(name):
 
 
 @app.route("/api/get-impact/", methods=['GET'])
+@cross_origin(origin='localhost', headers=['Content-Type', 'Authorization'])
 def get_impact():
     """
     Returns the different impact councils
@@ -44,6 +49,7 @@ def get_strategy():
     Returns the different strategies for the different impact councils 
     """
     # name = request.form['council']
+    # response.headers.add('Access-Control-Allow-Origin')
     strat = strategies(impact_councils[0])
     return jsonify(strategies=list(strat)), status.HTTP_201_CREATED
 
