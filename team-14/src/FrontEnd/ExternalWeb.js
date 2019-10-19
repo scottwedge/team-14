@@ -15,7 +15,7 @@ class ExternalWeb extends Component {
         console.log(JSON.stringify(name))
         fetch(local_host + 'api/get-strategy/',{
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
+            //mode: 'cors', // no-cors, *cors, same-origin
             // 
             credentials: 'same-origin', // include, *same-origin, omit
             headers: {
