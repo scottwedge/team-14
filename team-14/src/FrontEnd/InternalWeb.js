@@ -1,10 +1,10 @@
-import './ExternalWeb.css';
+import './InternalWeb.css';
 
 import React , { Component } from 'react';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 
-class ExternalWeb extends Component {
+class InternalWeb extends Component {
   render() {
     const options = [
       'one', 'two', 'three'
