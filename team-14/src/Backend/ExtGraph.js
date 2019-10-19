@@ -27,7 +27,7 @@ const data = [
   },
 ];
 
-export default class ScatterPlotContainer extends PureComponent {
+export default class ExternalScatterPlotContainer extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
   render() {
